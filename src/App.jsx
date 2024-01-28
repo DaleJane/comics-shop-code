@@ -16,6 +16,7 @@ import Search from "./components/search/Search";
 import ErrorPage from "./components/errorPage/ErrorPage";
 import ShoppingCart from "./components/shoppingCart/ShoppingCart";
 import WishList from "./components/wishLIst/WishList";
+import SignInLogIn from "./components/signInLogIn/SignInLogIn";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="searchPage" element={<Search />} />
       <Route path="shoppingCart" element={<ShoppingCart />} />
       <Route path="wishList" element={<WishList />} />
+      <Route path="signInLogIn" element={<SignInLogIn />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )

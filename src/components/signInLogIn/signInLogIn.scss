@@ -1,0 +1,81 @@
+@import "../style.scss";
+
+.signLogWrapper {
+  .signLogHolder {
+    .shopBannerHolder {
+      height: 74px;
+      background-color: #deeaf5;
+
+      .shopBanner {
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 35px;
+        h3 {
+          font-weight: 700;
+          margin: 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    height: 600px;
+    .signInDetailsHolder {
+      margin-top: 50px;
+      .signInDetails {
+        margin: 0 auto;
+        text-align: center;
+        .signInInput {
+          margin-top: 5px;
+          input {
+            outline: none;
+          }
+        }
+        .signInButton {
+          margin: 20px 0 20px 0;
+          @include bigRedButton();
+        }
+        .moveToLogIn {
+          p {
+            cursor: default;
+          }
+          span {
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            color: #ff0000;
+          }
+        }
+      }
+      .logInDetails {
+        margin: 0 auto;
+        text-align: center;
+        .logInInput {
+          margin-top: 5px;
+          input {
+            outline: none;
+          }
+        }
+        .logInButton {
+          margin: 20px 0 20px 0;
+          @include bigRedButton();
+        }
+        .moveToSignIn {
+          p {
+            cursor: default;
+          }
+          span {
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}

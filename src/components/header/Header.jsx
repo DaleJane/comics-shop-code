@@ -38,7 +38,7 @@ export default function Header() {
         </div>
         <div className="userCorner">
           <div className="log">
-            <Link to="#" onClick={() => alert("Work in progress...")}>
+            <Link to="/signInLogIn">
               <i className="fa-regular fa-user"></i>
             </Link>
           </div>
