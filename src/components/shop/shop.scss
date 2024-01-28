@@ -1,0 +1,399 @@
+@import "../style.scss";
+
+.shopWrapper {
+  .shopHolder {
+    .shopBannerHolder {
+      height: 74px;
+      background-color: #deeaf5;
+
+      .shopBanner {
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 35px;
+        h3 {
+          font-weight: 700;
+          margin: 0;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .shopMainHolder {
+      min-height: 940px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 35px;
+      .aside {
+        width: 20%;
+        .serial {
+          h5 {
+            font-weight: 700;
+          }
+
+          .serialName {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            border: 2px solid #131f35;
+            padding: 1px 10px;
+            cursor: pointer;
+            &:hover {
+              border: 2px solid $strongRed;
+              color: $strongRed;
+            }
+            .arrowDown {
+              transform: rotate(0deg);
+              transition: 0.3s;
+            }
+
+            .arrowUp {
+              transform: rotate(180deg);
+              transition: 0.3s;
+            }
+          }
+          .listHolderActive {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s;
+            ul {
+              padding: 5px 10px;
+              list-style: none;
+              li {
+                cursor: pointer;
+                margin: 2px 0;
+                &:hover {
+                  color: $strongRed;
+                }
+              }
+            }
+          }
+          .listHolderHide {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            ul {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .main {
+        width: 75%;
+        .mobileFilter {
+          display: none;
+          max-width: 200px;
+          h5 {
+            font-weight: 700;
+          }
+
+          .serialName {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            border: 2px solid #131f35;
+            padding: 1px 10px;
+            cursor: pointer;
+            &:hover {
+              border: 2px solid $strongRed;
+              color: $strongRed;
+            }
+            .arrowDown {
+              transform: rotate(0deg);
+              transition: 0.3s;
+            }
+
+            .arrowUp {
+              transform: rotate(180deg);
+              transition: 0.3s;
+            }
+          }
+          .listHolderActive {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s;
+            ul {
+              padding: 5px 10px;
+              list-style: none;
+              li {
+                cursor: pointer;
+                margin: 2px 0;
+                &:hover {
+                  color: $strongRed;
+                }
+              }
+            }
+          }
+          .listHolderHide {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            ul {
+              display: none;
+            }
+          }
+        }
+        .sortAndPreview {
+          display: flex;
+          height: 40px;
+          justify-content: end;
+          .number {
+            height: 40px;
+            display: flex;
+            align-items: center;
+          }
+          .displayPerPage {
+            margin: 0 0 0 10px;
+            height: 30px;
+            background-color: #deeaf5;
+            .displayPerPageHolder {
+              font-size: 12px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              height: 30px;
+              width: 55px;
+              cursor: pointer;
+            }
+            .numberOfComics {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              p {
+                margin: 0;
+              }
+              .ArrowDown {
+                font-size: 12px;
+              }
+            }
+            .displayListHidden {
+              position: relative;
+              top: 0;
+              visibility: hidden;
+              opacity: 0;
+            }
+            .displayListActive {
+              position: relative;
+              top: 0;
+              visibility: visible;
+              opacity: 1;
+              background-color: #deeaf5;
+              cursor: pointer;
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                  border-top: 1px solid black;
+                  padding: 3px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .sort {
+            margin: 0 0 0 10px;
+            height: 30px;
+            background-color: #deeaf5;
+            .sortHolder {
+              font-size: 12px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              height: 30px;
+              width: 105px;
+              cursor: pointer;
+            }
+            .sorted {
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              p {
+                margin: 0;
+              }
+              .ArrowDown {
+                font-size: 12px;
+              }
+            }
+            .sortListHidden {
+              position: relative;
+              top: 0;
+              visibility: hidden;
+              opacity: 0;
+            }
+            .sortListActive {
+              position: relative;
+              top: 0;
+              visibility: visible;
+              opacity: 1;
+              background-color: #deeaf5;
+              cursor: pointer;
+              ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                  border-top: 1px solid black;
+                  padding: 3px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .productHolder {
+          .container {
+            .row {
+              border-left: 1px solid #e5e5e5;
+              border-top: 1px solid #e5e5e5;
+            }
+          }
+        }
+        .pagination-holder {
+          display: flex;
+          justify-content: center;
+          margin: 20px 0 0 0;
+
+          .paginationBttns {
+            width: 80%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+          }
+
+          .paginationBttns li {
+            margin: 0 2px 0 0;
+          }
+
+          .paginationLink {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #242424;
+          }
+
+          .paginationLink:hover {
+            background-color: #efefef;
+            color: #242424;
+          }
+
+          .previousBttns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #242424;
+          }
+          .previousBttns:hover {
+            background-color: #efefef;
+            color: #242424;
+          }
+          .nextBttns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #242424;
+          }
+
+          .nextBttns:hover {
+            background-color: #efefef;
+            color: #242424;
+          }
+          .paginationLinkDisabled {
+            color: #bfbfbf;
+            background-color: #ffffff00;
+          }
+
+          .paginationLinkDisabled:hover {
+            color: #bfbfbf;
+            background-color: #ffffff00;
+          }
+
+          .paginationActive {
+            background-color: $strongRed;
+            color: #ffffff;
+            pointer-events: none;
+          }
+
+          .paginationActive .paginationLink {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .shopWrapper .shopHolder .shopBannerHolder .shopBanner {
+    max-width: 970px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .shopWrapper .shopHolder .shopBannerHolder .shopBanner {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .shopWrapper .shopHolder .shopBannerHolder .shopBanner {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .shopWrapper .shopHolder .shopMainHolder {
+    .aside {
+      display: none;
+    }
+    .main {
+      width: 100%;
+      .mobileFilter {
+        display: block;
+      }
+      .sortAndPreview {
+        max-width: 540px;
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shopWrapper
+    .shopHolder
+    .shopMainHolder
+    .main
+    .productHolder
+    .container
+    .row {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .shopWrapper .shopHolder .shopMainHolder .main .pagination-holder {
+    font-size: 10px;
+  }
+  .shopWrapper .shopHolder .shopMainHolder {
+    padding: 15px;
+  }
+}

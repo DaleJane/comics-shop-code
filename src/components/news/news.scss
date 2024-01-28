@@ -1,0 +1,56 @@
+@import "../style.scss";
+
+.newsWrapper {
+  .news {
+    padding: 40px 0;
+    .container .row {
+      .newsHolder {
+        height: 420px;
+        .newsPic {
+          img {
+            max-width: 100%;
+          }
+        }
+        .cardHeading {
+          color: $strongRed;
+          margin-top: 15px;
+        }
+        .cardPHolder {
+          height: 90px;
+          p {
+            font-size: 14px;
+            color: #777777;
+          }
+        }
+        .readHolder {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .row {
+    justify-content: center;
+  }
+
+  .newsWrapper .news .container .row .newsHolder {
+    max-width: 460px;
+    height: auto;
+    margin-top: 25px;
+
+    .cardPHolder {
+      p {
+        margin: 0;
+      }
+    }
+
+    .cardPHolder {
+      height: auto;
+    }
+    .readHolder {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+$headerColor: #131f35;
+$borderGray: #2b364a;
+$strongRed: #f50000;
+$detailsRed: #ff3a2d;
+$emailColor: #a7a9ae;
+$navHoverColor: #cdced1;
+$textGrayColor: #707070;
+
+@mixin wishLogBag() {
+  color: #fff;
+  padding: 10px;
+  a {
+    color: #fff;
+    &:hover {
+      color: $strongRed;
+    }
+  }
+}
+
+@mixin styledInput() {
+  input[type="number"] {
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    vertical-align: bottom;
+    outline: none;
+    pointer-events: none;
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+  input[type="button"] {
+    color: $textGrayColor;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+    width: 22px;
+    height: 40px;
+    cursor: pointer;
+    &:hover {
+      color: $detailsRed;
+    }
+  }
+}
+
+@mixin bigRedButton() {
+  button {
+    height: 40px;
+    width: 170px;
+    border: none;
+    transition: 0.4s;
+    background-color: #161616;
+    color: #fff;
+    font-weight: 700;
+    margin: auto 20px;
+    &:hover {
+      background-color: #ff0000;
+      transition: 0.4s;
+    }
+  }
+}

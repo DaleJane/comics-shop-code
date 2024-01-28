@@ -1,0 +1,299 @@
+@import "../style.scss";
+
+.headerHolder {
+  margin: 0 auto;
+  height: auto;
+  background-color: $headerColor;
+  .headerBig {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
+    height: 88px;
+
+    .headerLogo {
+      width: 176px;
+      margin: auto 0;
+      img {
+        width: 100%;
+      }
+    }
+    .bars {
+      display: none;
+      cursor: pointer;
+    }
+    .searchInputHolder {
+      margin: auto 0;
+      height: 38px;
+      a {
+        text-decoration: none;
+        color: $textGrayColor;
+        transition: 0.2s;
+        &:hover {
+          transition: 0.2s;
+          color: #161616;
+        }
+        .searchInput {
+          width: 600px;
+          display: flex;
+          justify-content: space-between;
+          background-color: #fff;
+          align-items: center;
+          cursor: pointer;
+          height: 40px;
+          padding-left: 10px;
+          p {
+            margin: 0;
+          }
+          .magnifierDelete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 38px;
+
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .userCorner {
+      width: 15%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .wish {
+        @include wishLogBag();
+      }
+      .log {
+        @include wishLogBag();
+      }
+
+      .bag {
+        @include wishLogBag();
+      }
+      .cartAndWishQty {
+        display: inline-block;
+        text-align: center;
+        background-color: $strongRed;
+        border-radius: 100%;
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+        position: relative;
+        bottom: 8px;
+        right: 3px;
+      }
+    }
+  }
+  .logo-visible-phone {
+    display: none;
+  }
+
+  .headerSmall {
+    border-top: 1px solid $borderGray;
+    .headerSmallHolder {
+      height: 45px;
+      background-color: $headerColor;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .ulDiv {
+        height: 100%;
+        width: 60%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0 0 0 20px;
+          li {
+            display: inline-block;
+            padding-left: 20px;
+            a {
+              color: #fff;
+              text-decoration: none;
+              transition: 0.3s;
+              &:hover {
+                color: $navHoverColor;
+                transition: 0.3s;
+              }
+              &.active {
+                color: $navHoverColor;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+    .emailAddress {
+      color: $emailColor;
+      display: flex;
+      align-items: center;
+      padding-right: 35px;
+      pointer-events: none;
+      i {
+        color: #fff;
+      }
+      p {
+        margin: 0;
+        padding-left: 5px;
+      }
+    }
+  }
+  .hamburgerMenuShow {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #161616;
+    z-index: 100;
+    .mobileMenuCloseButtonHolder {
+      display: flex;
+      justify-content: right;
+      .mobileCloseButton {
+        width: 50px;
+        height: 50px;
+        color: #c12525;
+        font-size: 40px;
+        margin: 20px 20px 0 0;
+        cursor: pointer;
+      }
+    }
+
+    .mobileLinks {
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .mobileLinksHolder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: #c12525;
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .hamburgerMenuShowOff {
+    display: none;
+  }
+}
+
+///////////////////////////////////////////HEADER RESPONSIVE/////////////////////////////////////////////////////////////////
+@media screen and (min-width: 1201px) {
+  .headerHolder .headerBig {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .headerHolder .headerSmall .emailAddress {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  .headerHolder .headerBig {
+    max-width: 970px;
+  }
+  .headerHolder .headerBig .searchInputHolder {
+    padding: 0 20px;
+  }
+  .headerHolder .headerSmall .headerSmallHolder {
+    max-width: 970px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .headerHolder .headerBig {
+    width: 720px;
+  }
+  .headerHolder .headerBig .userCorner {
+    width: 135px;
+  }
+  .headerHolder .headerBig .searchInputHolder a .searchInput {
+    width: 370px;
+  }
+  .headerHolder .headerSmall .headerSmallHolder {
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .headerHolder .headerBig {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+  }
+  .headerHolder .headerBig .headerLogo {
+    display: none;
+  }
+
+  .headerHolder .headerBig .bars {
+    color: #fff;
+    font-size: 24px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerHolder .headerBig .userCorner {
+    width: 50px;
+  }
+  .headerHolder .headerBig .searchInputHolder {
+    width: 50%;
+  }
+  .headerHolder .headerBig .searchInputHolder a .searchInput {
+    width: 100%;
+  }
+
+  .headerHolder .headerBig .userCorner .log,
+  .headerHolder .headerBig .userCorner .wish {
+    display: none;
+  }
+
+  .headerHolder .logo-visible-phone {
+    display: block;
+    background-color: $headerColor;
+    height: 56px;
+    .visible-logo {
+      width: 112px;
+      margin: 0 auto;
+      img {
+        height: 56px;
+      }
+    }
+  }
+
+  .headerHolder .headerSmall {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .headerHolder .headerBig .searchInputHolder a .searchInput {
+    input {
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 547px) {
+  .headerHolder .headerBig .searchInputHolder a .searchInput p {
+    font-size: 12px;
+  }
+}

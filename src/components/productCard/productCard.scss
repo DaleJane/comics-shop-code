@@ -1,0 +1,27 @@
+@import "../style.scss";
+
+.productWrapper {
+  padding: 15px 15px 0 15px;
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  .cardHolder {
+    width: 100%;
+    h6 {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    p {
+      color: $strongRed;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productWrapper {
+    width: 100%;
+  }
+}

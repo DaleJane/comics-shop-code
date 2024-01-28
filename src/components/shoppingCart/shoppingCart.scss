@@ -1,0 +1,241 @@
+@import "../style.scss";
+div {
+  .shopBannerHolder {
+    height: 74px;
+    background-color: #deeaf5;
+
+    .shopBanner {
+      max-width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 35px;
+      h3 {
+        font-weight: 700;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .cart-container {
+    padding: 30px 40px 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+      font-size: 32px;
+    }
+
+    .cart-empty {
+      margin: 20px 0;
+      text-align: center;
+      .start-shopping {
+        margin: 20px 0;
+        a {
+          color: #000;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .titles {
+      margin: 40px 0 20px 0;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 0.5fr 2fr 1fr 1fr;
+      .serialNumber {
+        text-align: center;
+        h6 {
+          font-weight: 700;
+        }
+      }
+      .quantity {
+        text-align: center;
+      }
+      .total {
+        text-align: center;
+      }
+    }
+
+    .cart-summary {
+      border-top: 2px solid #575757;
+      padding-top: 30px;
+      .cart-summary-stuff {
+        display: flex;
+        justify-content: space-between;
+        .addToCart {
+          @include bigRedButton();
+        }
+        .cart-checkout {
+          .subtotal {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 15px;
+          }
+
+          p,
+          .start-shopping {
+            margin: 15px 0;
+            a {
+              color: $detailsRed;
+              text-decoration: none;
+            }
+          }
+
+          .addToCart {
+            button {
+              height: 40px;
+              width: 170px;
+              border: none;
+              transition: 0.4s;
+              background-color: #161616;
+              color: #fff;
+              font-weight: 700;
+              margin: auto;
+              &:hover {
+                background-color: #ff0000;
+                transition: 0.4s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.cart-item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  border-top: 2px solid #575757;
+  padding: 5px 0;
+  h6 {
+    margin: auto;
+    font-weight: 700;
+  }
+
+  .cart-product {
+    display: flex;
+    h6 {
+      font-weight: 300;
+    }
+    img {
+      width: 100px;
+    }
+
+    .cart-product-pic-div {
+      width: 100px;
+      margin-right: 10px;
+      overflow: hidden;
+    }
+
+    .cart-product-details {
+      h6,
+      p {
+        margin: 0;
+      }
+
+      button {
+        margin: 0;
+        border: none;
+        background-color: #fff;
+        color: $detailsRed;
+        padding: 0;
+      }
+    }
+  }
+
+  .cart-product-price {
+    font-weight: 700;
+    align-self: center;
+    text-align: center;
+  }
+  .detailQty {
+    text-align: center;
+    margin: auto;
+  }
+
+  .cart-product-total-price {
+    align-self: center;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .cart-container .cart-item {
+    font-size: 13px;
+  }
+
+  div .cart-container .cart-summary {
+    .cart-summary-stuff {
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+      .addToCart {
+        text-align: center;
+      }
+      .cart-checkout {
+        text-align: center;
+        .subtotal {
+          display: block;
+          margin: 15px 0;
+          // justify-content: center;
+
+          span {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cart-item {
+    h6 {
+      font-size: 11px;
+    }
+    .cart-product {
+      display: block;
+      .cart-product-pic-div {
+        margin: 0;
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  .cart-container .cart-item {
+    font-size: 11px;
+  }
+
+  .titles {
+    .serialNumber {
+      h6 {
+        font-size: 11px;
+      }
+    }
+    .product {
+      h6 {
+        font-size: 11px;
+      }
+    }
+    .quantity {
+      h6 {
+        font-size: 11px;
+      }
+    }
+    .total {
+      h6 {
+        font-size: 11px;
+      }
+    }
+  }
+}
