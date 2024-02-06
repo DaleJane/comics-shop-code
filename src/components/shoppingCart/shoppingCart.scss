@@ -7,7 +7,6 @@ div {
     .shopBanner {
       max-width: 1400px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       height: 100%;
       margin: 0 auto;
@@ -16,8 +15,13 @@ div {
         font-weight: 700;
         margin: 0;
       }
-      p {
-        margin: 0;
+      .shopBannerLogOut {
+        display: flex;
+        align-items: center;
+        h3 {
+          color: #ff0000;
+          margin-left: 15px;
+        }
       }
     }
   }
@@ -185,8 +189,6 @@ div {
         .subtotal {
           display: block;
           margin: 15px 0;
-          // justify-content: center;
-
           span {
             margin-right: 15px;
           }

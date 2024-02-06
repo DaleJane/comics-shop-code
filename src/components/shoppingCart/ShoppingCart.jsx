@@ -3,15 +3,32 @@ import "./shoppingCart.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { clearCart, removeFromCart } from "../../app/features/slices/cartSlice";
+import { logOut } from "../../app/features/slices/logSignSlice";
 
 export default function ShoppingCart() {
   const cart = useSelector((state) => state.cart);
+  const allloggedin = useSelector((state) => state.loginSignin.loggedIn);
   const dispatch = useDispatch();
   return (
     <div>
       <div className="shopBannerHolder">
         <div className="shopBanner">
           <h3>SHOPPING CART</h3>
+          {allloggedin.length > 0 ? (
+            <div className="shopBannerLogOut">
+              <h3>{allloggedin[0].userName}</h3>
+              <button
+                className="btn btn-link"
+                onClick={() => {
+                  {
+                    dispatch(logOut());
+                  }
+                }}
+              >
+                Log Out
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="cart-container">

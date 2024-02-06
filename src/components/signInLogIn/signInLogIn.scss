@@ -34,12 +34,26 @@
           input {
             outline: none;
           }
+          i {
+            position: relative;
+            left: -25px;
+            top: -13px;
+            cursor: pointer;
+            &::before {
+              position: absolute;
+            }
+          }
         }
         .signInButton {
           margin: 20px 0 20px 0;
           @include bigRedButton();
         }
+        .statusMessage {
+          height: 120px;
+          white-space: pre-line;
+        }
         .moveToLogIn {
+          font-size: 12px;
           p {
             cursor: default;
           }
@@ -59,12 +73,26 @@
           input {
             outline: none;
           }
+          i {
+            position: relative;
+            left: -25px;
+            top: -13px;
+            cursor: pointer;
+            &::before {
+              position: absolute;
+            }
+          }
         }
         .logInButton {
           margin: 20px 0 20px 0;
           @include bigRedButton();
         }
+        .statusMessage {
+          height: 120px;
+          white-space: pre-line;
+        }
         .moveToSignIn {
+          font-size: 12px;
           p {
             cursor: default;
           }

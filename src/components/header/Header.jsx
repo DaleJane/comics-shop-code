@@ -140,7 +140,7 @@ export default function Header() {
               <div className="mobileLinksHolder">CONTACT</div>
             </Link>
             <Link
-              to="/"
+              to="signInLogIn"
               onClick={() => {
                 setHambMenu(false);
               }}
