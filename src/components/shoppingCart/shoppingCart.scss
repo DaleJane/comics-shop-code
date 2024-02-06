@@ -199,6 +199,15 @@ div {
 }
 
 @media (max-width: 576px) {
+  div .shopBannerHolder .shopBanner h3 {
+    font-size: 12px;
+  }
+  div .shopBannerHolder .shopBanner .shopBannerLogOut {
+    h3,
+    button {
+      font-size: 12px;
+    }
+  }
   .cart-item {
     h6 {
       font-size: 11px;
