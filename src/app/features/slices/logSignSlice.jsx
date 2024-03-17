@@ -12,23 +12,15 @@ export const logSignSlice = createSlice({
     signIn(state, action) {
       const exist = state.allSignedIn.find(
         (user) =>
-          user.userName === action.payload.userName ||
-          user.email === action.payload.email
+          user.userName === action.payload.userName &&
+          user.password === action.payload.password
       );
-      if (
-        action.payload.firstName.trim() === "" ||
-        action.payload.lastName.trim() === "" ||
-        action.payload.userName.trim() === "" ||
-        action.payload.email.trim() === "" ||
-        action.payload.password.trim() === ""
-      ) {
-        state.signMessage = "Please fill all inputs!";
-      } else if (exist) {
+      if (exist) {
         state.signMessage =
           "EMAIL or USERNAME are already in database.\nTry with another.";
       } else {
         state.allSignedIn.push({ ...action.payload });
-        state.signMessage = `${action.payload.firstName}, you are successfully registered.\nLOG IN and start shopping.`;
+        state.signMessage = `${action.payload.userName}, you are successfully registered.\n LOG IN and start shopping.`;
       }
     },
 
@@ -39,13 +31,13 @@ export const logSignSlice = createSlice({
           userInDatabase.password === action.payload.logPassword
       );
 
-      if (exist) {
+      if (state.loggedIn.length > 0) {
+        state.logMessage =
+          "You are alredy logged in!\nPlease go to shopping cart,\nlog out and try again.";
+      } else if (exist) {
         exist.loggedIn = true;
         state.loggedIn.push(exist);
         state.logMessage = "You are successufuly logged in.";
-      } else if (state.loggedIn.length > 0) {
-        state.logMessage =
-          "You are alredy logged in!\nPlease go to shopping cart,\nlog out and try again.";
       } else if (
         action.payload.logUserName.trim() === "" ||
         action.payload.logPassword.trim() === ""

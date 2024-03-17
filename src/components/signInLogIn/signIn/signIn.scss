@@ -1,0 +1,117 @@
+@import "../../style.scss";
+
+.signWrapper {
+  .signHolder {
+    height: 600px;
+    .shopBannerHolder {
+      height: 74px;
+      background-color: #deeaf5;
+
+      .shopBanner {
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 35px;
+        h3 {
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+    }
+
+    .signInDetailsHolder {
+      margin-top: 50px;
+      .signInDetails {
+        .registerFormWrapper {
+          display: flex;
+          justify-content: center;
+          width: 300px;
+          margin: 0 auto;
+          .success {
+            text-align: center;
+          }
+          .registerFormHolder {
+            width: 220px;
+            form {
+              label {
+                .valid {
+                  vertical-align: middle;
+                  i {
+                    color: #008000;
+                    position: relative;
+                    left: 0;
+                  }
+                }
+                .hide {
+                  display: none;
+                }
+                .invalid {
+                  vertical-align: middle;
+                  i {
+                    color: #ff0000;
+                    position: relative;
+                    left: 0;
+                  }
+                }
+              }
+              div {
+                // input {
+                // }
+                i {
+                  position: relative;
+                  left: -25px;
+                  top: -13px;
+                  cursor: pointer;
+                  &::before {
+                    position: absolute;
+                  }
+                }
+              }
+
+              .instructions {
+                position: relative;
+                left: 0;
+              }
+
+              .offscreen {
+                position: absolute;
+                left: -9999px;
+              }
+              .signInbutton {
+                margin: 20px 0 20px 0;
+                @include bigRedButton();
+              }
+            }
+            .moveToLogIn {
+              text-align: center;
+              p {
+                cursor: default;
+                font-size: 20px;
+                margin: 0;
+              }
+              a {
+                cursor: pointer;
+                font-weight: 700;
+                font-size: 16px;
+                color: #ff0000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////////////
+@media screen and (max-width: 400px) {
+  .signWrapper
+    .signHolder
+    .signInDetailsHolder
+    .signInDetails
+    .registerFormWrapper {
+    width: 250px;
+  }
+}

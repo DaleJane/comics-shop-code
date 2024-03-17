@@ -59,5 +59,10 @@ $textGrayColor: #707070;
       background-color: #ff0000;
       transition: 0.4s;
     }
+    &:disabled {
+      background-color: #838383;
+      color: #000000;
+      cursor: not-allowed;
+    }
   }
 }

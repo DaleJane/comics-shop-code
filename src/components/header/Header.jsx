@@ -38,7 +38,7 @@ export default function Header() {
         </div>
         <div className="userCorner">
           <div className="log">
-            <Link to="/signInLogIn">
+            <Link to="/signIn">
               <i className="fa-regular fa-user"></i>
             </Link>
           </div>
@@ -140,7 +140,7 @@ export default function Header() {
               <div className="mobileLinksHolder">CONTACT</div>
             </Link>
             <Link
-              to="signInLogIn"
+              to="signIn"
               onClick={() => {
                 setHambMenu(false);
               }}

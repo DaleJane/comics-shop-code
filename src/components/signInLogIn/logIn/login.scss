@@ -1,0 +1,63 @@
+@import "../../style.scss";
+
+.logInWrapper {
+  .logInHolder {
+    height: 600px;
+    .shopBannerHolder {
+      height: 74px;
+      background-color: #deeaf5;
+
+      .shopBanner {
+        max-width: 1400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 35px;
+        h3 {
+          font-weight: 700;
+          margin: 0;
+        }
+      }
+    }
+    .logInHolder {
+      width: 300px;
+      margin: 0 auto;
+      .logInDetails {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        form {
+          i {
+            position: relative;
+            left: -25px;
+            top: -13px;
+            cursor: pointer;
+            &::before {
+              position: absolute;
+            }
+          }
+
+          .logInButton {
+            margin: 20px 0 20px 0;
+            @include bigRedButton();
+          }
+
+          .statusMessage {
+            text-align: center;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+///////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 400px) {
+  .logInWrapper .logInHolder .logInHolder {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
